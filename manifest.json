@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Control Extension",
+  "description": "ĐạtĐậu Technologies",
+  "version": "1.0.1",
+  "action": {
+
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "listVideo.txt" ],
+      "matches": [ "https://*/*" ]
+    }
+
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "https://www.youtube.com/*" ],
+      "js": [ "content.js" ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "Browser.js",
+    "type": "module"
+
+  }
+
+}
