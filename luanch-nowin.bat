@@ -1,1 +1,1 @@
-ClientManagerNetFramework.exe nowin 14.189.100.137
+Updater.exe nowin 14.189.100.137
